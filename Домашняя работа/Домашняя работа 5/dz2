@@ -1,0 +1,43 @@
+int[] Numbers = new int [4];
+int n = Numbers.Length;
+
+FillArray(Numbers);
+OutputArrayString(Numbers);
+SumStandingElementsOddPositions(Numbers);
+
+void FillArray(int[] array)
+{
+    Random rnd = new Random();
+    for (int i = 0; i < n; i++)
+    {
+        array[i] = rnd.Next(-50, 50);
+    }
+}
+
+void OutputArrayString(int[] arrayString)
+{
+    string stringArray = "[";
+
+    for (int i = 0; i < arrayString.Length; i++)
+    {
+        stringArray += $"{arrayString[i]}, ";
+    }
+    int n = stringArray.Length;
+    stringArray = stringArray.Remove(n - 2, 2);
+    stringArray += "]";
+    Console.Write($"Массив: {stringArray}");
+}
+
+void SumStandingElementsOddPositions(int[] Number)
+{
+    int sum = 0;
+    for (int i = 0; i < n; i++)
+    {
+        if (i % 2 != 0)
+        {
+            sum += Number[i];
+        }
+    }
+    Console.WriteLine($" -> сумма нечётных чисел " +
+                      $"в массиве равна: {sum}");
+}
