@@ -30,4 +30,5 @@ void Numbers(int last)
         return (false, d);
     }
     return (true, d);
-}
+} 
+
