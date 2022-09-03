@@ -1,7 +1,7 @@
 ﻿Console.Write("Введите натуральное число N: ");
 string N = Console.ReadLine();
 
-var count = ExceptionHandling(n);
+var count = ExceptionHandling(N);
 
 if (count.exception && count.number >= 0)
 {
