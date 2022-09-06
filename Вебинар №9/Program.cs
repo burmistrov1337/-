@@ -30,4 +30,12 @@ void Numbers(int last)
         return (false, d);
     }
     return (true, d);
-}
+<<<<<<< HEAD
+} 
+=======
+} 
+
+
+
+fdfdf
+>>>>>>> eb830272c36cff4de039727727f35f376f340cfa
