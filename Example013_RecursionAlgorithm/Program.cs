@@ -1,6 +1,6 @@
 ﻿//
 
-string[,] table = new string[2, 5];
+// string[,] table = new string[2, 5];
 // table[0,0] table[0,1] table[0,2] ... table[0,4]
 // table[1,0] table[1,1] table[1,2] ... table[1,4]
 
@@ -47,42 +47,42 @@ void PrintImage(int[,] image)
     {
         for (int j = 0; j < image.GetLength(1); j++)
         {
-            //Console.Write($"{image[i, j]} ");
+            Console.Write($"{image[i, j]} ");
             if (image[i, j] == 0) Console.Write($" ");
             else Console.Write($"+");
         }
         Console.WriteLine();
     }
 }
-// void FillArray(int[,] matr)
-// {
-//     for (int i = 0; i < matr.GetLength(0); i++)
-//     {
-//         for (int j = 0; j < matr.GetLength(1); j++)
-//         {
-//             matr[i,j] = new Random().Next(1,10); //[1;10)
-//         }
-//     }
-// }
-
-// int[,] matrix = new int[3, 4];
-// PrintImage(matrix);
-// FillArray(matrix);
-// Console.WriteLine()// ;
-
-
-void FillImage(int row, int col)
+void FillArray(int[,] matr)
 {
-    if (pic[row, col] == 0)
+    for (int i = 0; i < matr.GetLength(0); i++)
     {
-        pic[row, col] = 1;
-        FillImage(row - 1, col);
-        FillImage(row, col - 1);
-        FillImage(row + 1, col);
-        FillImage(row, col + 1);
+        for (int j = 0; j < matr.GetLength(1); j++)
+        {
+            matr[i,j] = new Random().Next(1,10); //[1;10)
+        }
     }
 }
 
-PrintImage(pic);
-FillImage(13,13);
-PrintImage(pic);
+int[,] matrix = new int[3, 4];
+PrintImage(matrix);
+FillArray(matrix);
+Console.WriteLine();
+
+
+// void FillImage(int row, int col)
+// {
+//     if (pic[row, col] == 0)
+//     {
+//         pic[row, col] = 1;
+//         FillImage(row - 1, col);
+//         FillImage(row, col - 1);
+//         FillImage(row + 1, col);
+//         FillImage(row, col + 1);
+//     }
+// }
+
+//PrintImage(pic);
+//FillImage(13,13);
+//PrintImage(pic);
