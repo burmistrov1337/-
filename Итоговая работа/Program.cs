@@ -1,4 +1,6 @@
-﻿// Первый елемент массива:
+﻿Console.Clear();
+
+// Первый елемент массива:
 Console.Write("Введите первый элемент массива: ");
 string firstElement = Console.ReadLine();
 
